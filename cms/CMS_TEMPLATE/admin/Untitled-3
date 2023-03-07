@@ -1,0 +1,14 @@
+xampp->apache-> .conf file-> mod_rewrite не трябва да е коментирано 
+
+**
+
+save file in the root directory of the site: .thaccess и в него пишеш :
+RewriteEngine on
+
+RewriteRule ^(index|contact|registration)$ $1.php [NC,L] //ще заместо индекса контакт или регистрацията само със примерно index a не index.php
+
+
+**
+
+сега ако отида на линка на началната страница и ако цъкна в УРЛ-а ще се появи пак index.php така че там където пише : href='inex.php' го замествам със href='inex'
+
